@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{53B76919-4361-4D8D-825C-36F5192E71FB}</ProjectGuid>
+    <RootNamespace>Guide</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../libguide/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>..\libguide\Debug\libguide.lib;mapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../libguide/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <LargeAddressAware>true</LargeAddressAware>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="ColoredStatic.cpp" />
+    <ClCompile Include="ExportFileDialog.cpp" />
+    <ClCompile Include="FgColorDialog.cpp" />
+    <ClCompile Include="FlatButton.cpp" />
+    <ClCompile Include="FontPref.cpp" />
+    <ClCompile Include="FormatBar.cpp" />
+    <ClCompile Include="Guide.cpp" />
+    <ClCompile Include="GuideDoc.cpp" />
+    <ClCompile Include="GuidePreview.cpp" />
+    <ClCompile Include="GuidePrintDlg.cpp" />
+    <ClCompile Include="GuideView.cpp" />
+    <ClCompile Include="HyperLinkDialog.cpp" />
+    <ClCompile Include="IconWnd.cpp" />
+    <ClCompile Include="KeyboardHelp.cpp" />
+    <ClCompile Include="LeftView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="SearchDlg.cpp" />
+    <ClCompile Include="SelectNodeDialog.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp" />
+    <ClCompile Include="ColorPref.cpp" />
+    <ClCompile Include="DateTimePref.cpp" />
+    <ClCompile Include="HSListBox.cpp" />
+    <ClCompile Include="PortablePref.cpp" />
+    <ClCompile Include="PrefSheet.cpp" />
+    <ClCompile Include="PrintPref.cpp" />
+    <ClCompile Include="StartupPref.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="ColoredStatic.h" />
+    <ClInclude Include="ColorPref.h" />
+    <ClInclude Include="DateTimePref.h" />
+    <ClInclude Include="ExportFileDialog.h" />
+    <ClInclude Include="FgColorDialog.h" />
+    <ClInclude Include="FlatButton.h" />
+    <ClInclude Include="FontPref.h" />
+    <ClInclude Include="FormatBar.h" />
+    <ClInclude Include="FormatBarDefs.h" />
+    <ClInclude Include="Guide.h" />
+    <ClInclude Include="GuideDoc.h" />
+    <ClInclude Include="GuidePreview.h" />
+    <ClInclude Include="GuidePrintDlg.h" />
+    <ClInclude Include="GuideView.h" />
+    <ClInclude Include="HSListBox.h" />
+    <ClInclude Include="HyperLinkDialog.h" />
+    <ClInclude Include="IconWnd.h" />
+    <ClInclude Include="KeyboardHelp.h" />
+    <ClInclude Include="LeftView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="PortablePref.h" />
+    <ClInclude Include="PrefSheet.h" />
+    <ClInclude Include="PrintPref.h" />
+    <CustomBuild Include="Resource.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating map file for help compiler...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">echo // Generated Help Map file.  Used by Guide.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating map file for help compiler...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">echo // Generated Help Map file.  Used by Guide.HHP. &gt; "hlp\HTMLDefines.h"
+echo. &gt; "hlp\HTMLDefines.h"
+echo // Commands (ID_* and IDM_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h ID_,HID_,0x10000 IDM_,HIDM_,0x10000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Prompts (IDP_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDP_,HIDP_,0x30000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Resources (IDR_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDR_,HIDR_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Dialogs (IDD_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h IDD_,HIDD_,0x20000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+echo. &gt;&gt; "hlp\HTMLDefines.h"
+echo // Frame Controls (IDW_*) &gt;&gt; "hlp\HTMLDefines.h"
+makehm /h /a afxhh.h IDW_,HIDW_,0x50000 "%(Filename)%(Extension)" &gt;&gt; "hlp\HTMLDefines.h"
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">hlp\HTMLDefines.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="SearchDlg.h" />
+    <ClInclude Include="SelectNodeDialog.h" />
+    <ClInclude Include="StartupPref.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\arrowcop.cur" />
+    <None Include="res\Guide.rc2" />
+    <None Include="res\nodrop.cur" />
+    <None Include="..\Changes" />
+    <None Include="Guide.reg" />
+    <None Include="..\License" />
+    <None Include="..\NOTICE" />
+    <None Include="..\Readme" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\book.bmp" />
+    <Image Include="res\fmtbold.ico" />
+    <Image Include="res\fmtital.ico" />
+    <Image Include="res\fmtul.ico" />
+    <Image Include="res\format_toolbar.bmp" />
+    <Image Include="res\Guide.ico" />
+    <Image Include="res\GuideDoc.ico" />
+    <Image Include="res\icons.bmp" />
+    <Image Include="res\jfycenter.ico" />
+    <Image Include="res\jfyleft.ico" />
+    <Image Include="res\jfyright.ico" />
+    <Image Include="res\page.bmp" />
+    <Image Include="res\state_icons.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\Toolbar2.bmp" />
+    <Image Include="res\trayicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Guide.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="Guide.exe.manifest">
+      <DeploymentContent>true</DeploymentContent>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gdeutil\gdeutil.vcxproj">
+      <Project>{ab20d305-f3ac-4cae-aabc-c692fed467e7}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libguide\libguide.vcxproj">
+      <Project>{0511f7b7-4962-48d9-bd76-97d3abec592a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Guide.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
