@@ -37,7 +37,7 @@ struct guide_nodedata_t *guide_nodedata_create_with_data(struct guide_t *guide,
 	if (!data) return data;
 
 	data->title = _wcsdup(title ? title : L"");
-	data->text  = strdup(text ? text : "");
+	data->text  = _strdup(text ? text : "");
 	data->state = 0;
 	data->icon	= 0;
 	data->first_line = 0;
@@ -67,7 +67,7 @@ struct guide_nodedata_t *guide_nodedata_clone(struct guide_nodedata_t *src, stru
 	if (!data) return data;
 
 	data->title = _wcsdup(old_data->title);
-	data->text  = strdup(old_data->text);
+	data->text  = _strdup(old_data->text);
 	data->color = old_data->color;
 	data->bgcolor = old_data->bgcolor;
 	data->first_line = old_data->first_line;
@@ -100,7 +100,7 @@ void guide_nodedata_set_text(struct guide_nodedata_t *data, const char *text)
 	assert(data);
 	assert(data->text);
 
-	p = strdup(text ? text : "");
+	p = _strdup(text ? text : "");
 	assert(p);
 	if (!p) return;
 
@@ -257,7 +257,7 @@ static unsigned char *convert_to_utf8(const wchar_t *s)
 
 	/* check for s == L"" */
 	if (s[0] == 0)
-		return (unsigned char *)strdup("");
+		return (unsigned char *)_strdup("");
 
 	/* find out the number of bytes required for the utf-8 string */
 	r = WideCharToMultiByte(CP_UTF8, 0, s, -1, NULL, 0, NULL, NULL);

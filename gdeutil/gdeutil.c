@@ -69,7 +69,7 @@ static unsigned char *convert_to_utf8(const wchar_t *s)
 
 	/* check for s == L"" */
 	if (s[0] == 0)
-		return (unsigned char *)strdup("");
+		return (unsigned char *)_strdup("");
 
 	/* find out the number of bytes required for the utf-8 string */
 	r = WideCharToMultiByte(CP_UTF8, 0, s, -1, NULL, 0, NULL, NULL);
@@ -196,7 +196,7 @@ void export_xml(const char *filename)
 	xml_filename = (char *)malloc(strlen(filename) + 16);
 	strcpy(xml_filename, filename);
 	len = strlen(xml_filename);
-	if (len < 4 || stricmp(xml_filename + len - 4, ".gde") != 0)
+	if (len < 4 || _stricmp(xml_filename + len - 4, ".gde") != 0)
 		strcat(xml_filename, ".xml");
 	else
 		strcpy(xml_filename + len - 4, ".xml");
