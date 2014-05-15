@@ -96,6 +96,9 @@ public:
 	afx_msg void OnFormatLinespcOne();
 	afx_msg void OnFormatLinespcOnehalf();
 	afx_msg void OnFormatLinespcTwo();
+	afx_msg void OnFormatIncreaseFontSize();
+	afx_msg void OnFormatDecreaseFontSize();
+
 private:
 	void OnDropDownNumberingButton();
 public:

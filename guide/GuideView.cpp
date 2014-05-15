@@ -78,6 +78,8 @@ BEGIN_MESSAGE_MAP(CGuideView, CRichEditView)
 	ON_UPDATE_COMMAND_UI(ID_FORMAT_BULLETED, OnUpdateBullet)
 	ON_COMMAND(ID_FORMAT_NUMBERED, OnNumber)
 	ON_UPDATE_COMMAND_UI(ID_FORMAT_NUMBERED, OnUpdateNumber)
+	ON_COMMAND(ID_FORMAT_INCREASEFONTSIZE, OnFormatIncreaseFontSize)
+	ON_COMMAND(ID_FORMAT_DECREASEFONTSIZE, OnFormatDecreaseFontSize)
 	// colors
 	ON_COMMAND(ID_FORMAT_BACKGROUNDCOLOUR, OnBackgroundColor)
 	ON_COMMAND(ID_FORMAT_FOREGROUNDCOLOUR, OnForegroundColor)
@@ -615,6 +617,31 @@ void CGuideView::OnFormatStrikethrough()
 void CGuideView::OnUpdateFormatStrikethrough(CCmdUI *pCmdUI)
 {
 	OnUpdateCharEffect(pCmdUI, CFM_STRIKEOUT, CFM_STRIKEOUT);
+}
+
+void CGuideView::OnFormatIncreaseFontSize()
+{
+	CHARFORMAT2 cf;
+	cf = GetCharFormatSelection();
+
+	if (!(cf.dwMask & CFM_SIZE))
+		return;
+	
+	cf.dwMask = CFM_SIZE;
+	cf.yHeight += 20;
+	SetCharFormat(cf);
+}
+void CGuideView::OnFormatDecreaseFontSize()
+{
+	CHARFORMAT2 cf;
+	cf = GetCharFormatSelection();
+
+	if (!(cf.dwMask & CFM_SIZE))
+		return;
+
+	cf.dwMask = CFM_SIZE;
+	cf.yHeight -= 20;
+	SetCharFormat(cf);
 }
 
 void CGuideView::ApplyFont()

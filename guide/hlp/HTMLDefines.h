@@ -89,6 +89,12 @@
 #define HID_TREE_COLOR                          0x180C5
 #define HID_TREE_BGCOLOR                        0x180C6
 #define HID_TREE_NODEICON                       0x180C7
+#define HID_TEXT_INCREASEFONTSIZE               0x180C8
+#define HID_TEXT_DECREASEFONTSIZE               0x180C9
+#define HID_FORMAT_INCREASEFONTSIZE             0x180CA
+#define HID_FORMAT_DECREASEFONTSIZE             0x180CB
+#define HID_ACCELERATOR32972                    0x180CC
+#define HID_ACCELERATOR32976                    0x180D0
 #define HID_INDICATOR_CHILDCOUNT                0x1E706
 #define HID_INDICATOR_LC                        0x1E707
 #define HID_VIEW_FORMATBAR                      0x1E804

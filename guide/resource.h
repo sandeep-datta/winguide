@@ -353,6 +353,12 @@
 #define ID_TREE_COLOR                   32965
 #define ID_TREE_BGCOLOR                 32966
 #define ID_TREE_NODEICON                32967
+#define ID_TEXT_INCREASEFONTSIZE        32968
+#define ID_TEXT_DECREASEFONTSIZE        32969
+#define ID_FORMAT_INCREASEFONTSIZE      32970
+#define ID_FORMAT_DECREASEFONTSIZE      32971
+#define ID_ACCELERATOR32972             32972
+#define ID_ACCELERATOR32976             32976
 #define ID_INDICATOR_CHILDCOUNT         59142
 #define ID_INDICATOR_LC                 59143
 #define ID_VIEW_FORMATBAR               59396
@@ -362,7 +368,7 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        216
-#define _APS_NEXT_COMMAND_VALUE         32968
+#define _APS_NEXT_COMMAND_VALUE         32978
 #define _APS_NEXT_CONTROL_VALUE         1095
 #define _APS_NEXT_SYMED_VALUE           104
 #endif
