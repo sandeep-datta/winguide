@@ -40,12 +40,12 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>..\out\$(Configuration)\</OutDir>
-    <IntDir>..\obj\$(Configuration)\</IntDir>
+    <IntDir>..\obj\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>..\out\$(Configuration)\</OutDir>
-    <IntDir>..\obj\$(Configuration)\</IntDir>
+    <IntDir>..\obj\$(Configuration)\$(ProjectName)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
